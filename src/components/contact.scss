@@ -1,0 +1,76 @@
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 10px;
+      display: block;
+      position: relative;
+      clear: both;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    border: 0;
+    background: #b4d5db;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 100%;
+    border: 0;
+    background: #b4d5db;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px;
+    min-height: 150px;
+    box-sizing: border-box;
+  }
+  .flat-button {
+    color: #f3f3f3;
+    background: 0 0;
+    letter-spacing: 3px;
+    text-decoration: none;
+    margin-top: 0;
+    padding: 8px 13px;
+    border: 2px solid #b4d5db;
+    float: right;
+    border-radius: 7px;
+
+    &:hover {
+      background: #b4d5db;
+      color: #333;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .contact-form {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}

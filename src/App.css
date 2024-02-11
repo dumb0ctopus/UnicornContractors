@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #1e1f4e;
+}
+
+.btn-primary {
+  @apply px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey transition-all duration-300 hover:-translate-y-4;
+}
+
+@media (max-width: 1023px) {
+  .mediumScreen {
+    margin-top: 30px;
+  }
+  .aboutHeaderMobile {
+    display: block;
+  }
+  .aboutHeader {
+    display: none;
+  }
+}
+@media (min-width: 1023px) {
+  .aboutHeaderMobile {
+    display: none;
+  }
+  .aboutHeader {
+    display: block;
+  }
+}
+@media (max-width: 1023px) {
+  .sScreenButt {
+    margin-top: -13px;
+  }
+  .imgMdScreen {
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 640px) {
+  .imgMdScreen {
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .smPadding {
+    padding: 7px;
+  }
+  .aboutHeader {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .imgMdScreen {
+    height: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1020px) {
+  .aboutBtn,
+  .aboutHeader {
+    text-align: center;
+    padding: 20px 50px;
+  }
+}
+
+.aboutBtn {
+  padding: 15px 40px;
+  border-radius: 10px;
+}
+
+.headLogo {
+  width: 50px;
+}
