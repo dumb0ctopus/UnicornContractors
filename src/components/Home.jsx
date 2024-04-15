@@ -1,9 +1,16 @@
-import React from "react";
 import { Carousel } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className="bg-[#b4d5db] mediumScreen" id="home">
+      <Link to="/bootcamp">
+        <div className="text-center">
+          <button className="mt-20 p-11 font-bold text-lg text-center justify-center rounded-xl -mb-20 bg-brandPrimary">
+            Click to join our bootcamp
+          </button>
+        </div>
+      </Link>
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen min-w-full">
         <Carousel className="w-full">
           <div className="my-20 lg:my-8 py-1 flex flex-col lg:flex-row-reverse items-center justify-between gap-12 overflow-hidden leading-snug">

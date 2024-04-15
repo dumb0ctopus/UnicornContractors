@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import logo from "/assets/Logos/unicorn.png";
-import { Link } from "react-scroll";
-import {
-  FaFacebook,
-  FaXTwitter,
-  FaWhatsapp,
-  FaLinkedin,
-  FaLinkedinIn,
-} from "react-icons/fa6";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+import { FaXTwitter, FaWhatsapp, FaLinkedin } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXmark, FaBars } from "react-icons/fa6";
 
@@ -60,7 +55,10 @@ function Navbar() {
         >
           <div className="flex justify-between items-center text-base gap-6">
             <div className="flex w-[100%] p-3 pt-0 pb-0 h-[50%] justify-between border-red-600">
-              <a href="" className=" font-semibold flex items-center space-x-3">
+              <RouterLink
+                to="/"
+                className=" font-semibold flex items-center space-x-3"
+              >
                 <img
                   src={logo}
                   alt=""
@@ -69,12 +67,12 @@ function Navbar() {
                 <span className="text-[#4d4d4e] text-[29px]">
                   Unicorn Contractors
                 </span>
-              </a>
+              </RouterLink>
 
               {/* nav items for large devices */}
               <ul className="md:flex space-x-11 hidden">
                 {navItems.map(({ link, path }) => (
-                  <Link
+                  <ScrollLink
                     key={path}
                     to={path}
                     spy={true}
@@ -83,8 +81,13 @@ function Navbar() {
                     className="block text-[#767676] lg:text-lg md:text-[13px] hover:text-brandPrimary first:font-medium transition-transform transform hover:scale-105 cursor-pointer"
                   >
                     {link}
-                  </Link>
+                  </ScrollLink>
                 ))}
+                <RouterLink to="/bootcamp">
+                  <h1 className="block text-[#767676] lg:text-lg md:text-[13px] hover:text-brandPrimary first:font-medium transition-transform transform hover:scale-105 cursor-pointer">
+                    Bootcamp
+                  </h1>
+                </RouterLink>
               </ul>
 
               {/* nav items for large devices ___ social media buttons*/}
@@ -142,7 +145,7 @@ function Navbar() {
             }`}
           >
             {navItems.map(({ link, path }) => (
-              <Link
+              <ScrollLink
                 key={path}
                 to={path}
                 spy={true}
@@ -152,8 +155,13 @@ function Navbar() {
                 onClick={closeMenu}
               >
                 {link}
-              </Link>
+              </ScrollLink>
             ))}
+            <RouterLink to="/bootcamp">
+              <h1 className="block text-lg text-[#767676] hover:text-brandPrimary first:font-medium text-center transition-transform transform hover:scale-105 mt-3">
+                Bootcamp
+              </h1>
+            </RouterLink>
           </div>
         </nav>
       </header>
